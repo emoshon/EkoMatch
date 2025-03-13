@@ -1,14 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f8f2;
+    background-color: #ffffff; /* Arka plan beyaz */
     color: #101a0f;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #101a0f;
-    color: #f2f8f2;
+    background-color: #b1d1af; /* Header rengi */
+    color: #101a0f; /* Yazı rengi */
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
@@ -25,7 +25,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #101a0f; /* Menü yazı rengi */
     text-decoration: none;
 }
 
