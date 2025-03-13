@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #b1d1af;
+    background-color: #f2f8f2;
     color: #101a0f;
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@ body {
 
 header {
     background-color: #101a0f;
-    color: #b1d1af;
+    color: #f2f8f2;
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
@@ -36,7 +36,7 @@ nav ul li a {
 
 .button {
     background-color: #101a0f;
-    color: #b1d1af;
+    color: #f2f8f2;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
