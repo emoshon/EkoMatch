@@ -1,126 +1,181 @@
 body {
-    background-color: #FFFFFF;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #FFFFFF;
+    color: #101a0f;
 }
 
 header {
-    background-color: #b1d1af;
-    text-align: center;
-    padding: 20px;
-}
-
-header h1 {
-    color: #101a0f;
-    margin: 0;
-}
-
-nav {
     display: flex;
     justify-content: space-between;
-    background-color: #f4f4f4;
-    padding: 10px;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #284427;
 }
 
-nav a {
-    color: #101a0f;
-    text-decoration: none;
+.logo h1 {
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
     margin: 0 15px;
 }
 
-nav a:hover {
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.active {
     text-decoration: underline;
 }
 
-.content {
-    padding: 20px;
+.hero {
+    background: url('images/background.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 20px;
+    color: #FFFFFF;
 }
 
-.footer {
-    background-color: #b1d1af;
+.hero-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #11602e;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0e4c25;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.feature {
     text-align: center;
-    padding: 10px;
-    position: fixed;
+    width: 30%;
+}
+
+.feature img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #284427;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 15px;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
 
-.footer p {
-    color: #101a0f;
-    margin: 0;
-}
-
+/* Profil Menüsü */
 .profile-menu {
     display: none;
-}
-
-.profile-menu.show {
-    display: block;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.card {
-    background-color: #f4f4f4;
-    padding: 20px;
-    width: 30%;
-    border: 1px solid #ddd;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-}
-
-.filter {
-    margin: 20px 0;
-}
-
-.btn {
-    background-color: #101a0f;
-    color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    border: none;
+    border-radius: 5px;
+}
+
+.profile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-menu ul li {
+    padding: 8px 15px;
     cursor: pointer;
 }
 
-.btn:hover {
-    background-color: #b1d1af;
+.profile-menu ul li:hover {
+    background-color: #f4f4f4;
 }
 
-#profile-link {
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 5px;
     position: relative;
 }
 
-.profile-menu {
-    background-color: #ffffff;
+.close {
     position: absolute;
-    right: 0;
-    top: 40px;
-    border: 1px solid #ddd;
-    width: 150px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.profile-menu p {
-    margin: 5px 0;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
     cursor: pointer;
 }
 
-.profile-menu p:hover {
-    background-color: #f4f4f4;
-}
-/* Mevcut stil kodlarınıza eklemeniz gereken yeni stil kodları */
-.waste-list {
-    display: none;
+.close:hover {
+    color: red;
 }
 
+/* Form Stilleri */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form select, form textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 15px;
+}
 .login-page, .register-page {
     display: none;
 }
