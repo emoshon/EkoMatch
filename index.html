@@ -14,40 +14,89 @@
 
 <nav>
     <a href="#">Ana Sayfa</a>
-    <a href="#">Atık İlanları</a>
+    <a href="#" id="waste-list-link">Atık İlanları</a>
     <a href="#">Hakkımızda</a>
     <a href="#">İletişim</a>
     <a href="#" id="profile-link">Profil</a>
 </nav>
 
 <div class="content">
-    <div class="filter">
-        <button class="btn">İlanları Fiyata Göre Filtrele</button>
-        <button class="btn">İlanları Türlere Göre Filtrele</button>
+    <!-- Ana Sayfa İçeriği -->
+    <div class="main-content">
+        <h2>Hoşgeldiniz! Atık ilanlarına göz atabilirsiniz.</h2>
+        <p>Atık ilanlarına göz atmak için "Atık İlanları" sekmesine tıklayın.</p>
     </div>
 
-    <div class="container">
-        <div class="card">
-            <img src="https://via.placeholder.com/150" alt="Atık Fotoğrafı">
-            <h3>Firma Adı</h3>
-            <p>Atık Türü: Plastik</p>
-            <p>Fiyat: Ücretsiz</p>
-            <button class="btn">İletişime Geç</button>
+    <!-- Atık İlanları Sayfası (Başlangıçta gizlenmiş) -->
+    <div class="waste-list" id="waste-list">
+        <div class="filter">
+            <button class="btn">İlanları Fiyata Göre Filtrele</button>
+            <button class="btn">İlanları Türlere Göre Filtrele</button>
         </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/150" alt="Atık Fotoğrafı">
-            <h3>Firma Adı 2</h3>
-            <p>Atık Türü: Cam</p>
-            <p>Fiyat: Ücretsiz</p>
-            <button class="btn">İletişime Geç</button>
+
+        <div class="container">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Atık Fotoğrafı">
+                <h3>Firma Adı</h3>
+                <p>Atık Türü: Plastik</p>
+                <p>Fiyat: Ücretsiz</p>
+                <button class="btn">İletişime Geç</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Atık Fotoğrafı">
+                <h3>Firma Adı 2</h3>
+                <p>Atık Türü: Cam</p>
+                <p>Fiyat: Ücretsiz</p>
+                <button class="btn">İletişime Geç</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Atık Fotoğrafı">
+                <h3>Firma Adı 3</h3>
+                <p>Atık Türü: Metal</p>
+                <p>Fiyat: Ücretsiz</p>
+                <button class="btn">İletişime Geç</button>
+            </div>
         </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/150" alt="Atık Fotoğrafı">
-            <h3>Firma Adı 3</h3>
-            <p>Atık Türü: Metal</p>
-            <p>Fiyat: Ücretsiz</p>
-            <button class="btn">İletişime Geç</button>
-        </div>
+    </div>
+
+    <!-- Giriş/Kayıt Sayfası (Başlangıçta gizlenmiş) -->
+    <div class="login-page" id="login-page">
+        <h2>Giriş Yap veya Kayıt Ol</h2>
+        <form id="login-form">
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="password">Şifre:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit" class="btn">Giriş Yap</button>
+        </form>
+        <p>Henüz kaydınız yok mu? <a href="#" id="register-link">Kayıt Ol</a></p>
+    </div>
+
+    <!-- Kayıt Sayfası (Başlangıçta gizlenmiş) -->
+    <div class="register-page" id="register-page">
+        <h2>Kayıt Ol</h2>
+        <form id="register-form">
+            <label for="company-name">Firma İsmi:</label>
+            <input type="text" id="company-name" name="company-name" required><br><br>
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            <label for="email">E-Mail:</label>
+            <input type="email" id="register-email" name="email" required><br><br>
+            <label for="password">Şifre:</label>
+            <input type="password" id="register-password" name="password" required><br><br>
+            <label for="address">Adres:</label>
+            <input type="text" id="address" name="address" required><br><br>
+            <label for="industry">Sanayi Türü:</label>
+            <select id="industry" name="industry" required>
+                <option value="kimya">Kimya</option>
+                <option value="metal">Metal</option>
+                <option value="plastik">Plastik</option>
+                <option value="gıda">Gıda</option>
+                <!-- Diğer seçenekler eklenebilir -->
+            </select><br><br>
+            <button type="submit" class="btn">Kayıt Ol</button>
+        </form>
+        <p>Zaten kaydınız var mı? <a href="#" id="login-link">Giriş Yap</a></p>
     </div>
 </div>
 
@@ -55,17 +104,29 @@
     <p>Sanayi atıklarını değerlendir, doğayı koru</p>
 </div>
 
-<!-- Profile Menu (Hidden by default) -->
-<div class="profile-menu" id="profile-menu">
-    <p>Favoriler</p>
-    <p>Kaydedilenler</p>
-    <p>Çıkış Yap</p>
-</div>
-
 <script>
+    // Profil menüsünü açma
     document.getElementById("profile-link").addEventListener("click", function() {
         var profileMenu = document.getElementById("profile-menu");
         profileMenu.classList.toggle("show");
+    });
+
+    // Atık ilanları linkine tıklama
+    document.getElementById("waste-list-link").addEventListener("click", function() {
+        document.getElementById("waste-list").style.display = "block";
+        document.getElementById("main-content").style.display = "none";
+    });
+
+    // Giriş yapma sayfasına yönlendirme
+    document.getElementById("login-link").addEventListener("click", function() {
+        document.getElementById("login-page").style.display = "block";
+        document.getElementById("register-page").style.display = "none";
+    });
+
+    // Kayıt olma sayfasına yönlendirme
+    document.getElementById("register-link").addEventListener("click", function() {
+        document.getElementById("register-page").style.display = "block";
+        document.getElementById("login-page").style.display = "none";
     });
 </script>
 
