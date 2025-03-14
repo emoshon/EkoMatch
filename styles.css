@@ -8,7 +8,8 @@ body {
 
 header {
     display: flex;
-    align-items: center;     /* Sadece dikeyde ortalar */
+    justify-content: space-between;
+    align-items: center;     /* Tüm öğeleri dikeyde ortalar */
     padding: 15px 30px;
     background-color: #284427;
     height: 80px;
