@@ -17,7 +17,7 @@
                 <li><a href="#">Atık İlanları</a></li>
                 <li><a href="#">Hakkımızda</a></li>
                 <li><a href="#">İletişim</a></li>
-                <li><a href="#" id="profile-link">Profil</a></li>
+                <li><button id="open-login" class="btn">Giriş Yap</button></li> <!-- Menüye giriş butonu eklendi -->
             </ul>
         </nav>
     </header>
@@ -53,15 +53,6 @@
         <p>&copy; 2025 EkoMatch. Tüm hakları saklıdır.</p>
     </footer>
 
-    <!-- Profil Menüsü -->
-    <div class="profile-menu" id="profile-menu">
-        <ul>
-            <li><a href="#">Favoriler</a></li>
-            <li><a href="#">Kaydedilenler</a></li>
-            <li><a href="#">Çıkış Yap</a></li>
-        </ul>
-    </div>
-
     <!-- Giriş Yap Modal -->
     <div id="login-modal" class="modal">
         <div class="modal-content">
@@ -75,61 +66,6 @@
                 <button type="submit" class="btn">Giriş Yap</button>
             </form>
             <p>Hesabınız yok mu? <a href="#" id="show-register">Kayıt Ol</a></p>
-        </div>
-    </div>
-
-    <!-- Kayıt Ol Modal -->
-    <div id="register-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="close-register-modal">&times;</span>
-            <h2>Kayıt Ol</h2>
-            <form id="register-form">
-                <label for="company-name">Firma İsmi:</label>
-                <input type="text" id="company-name" name="company-name" required>
-                <label for="phone">Telefon:</label>
-                <input type="tel" id="phone" name="phone" required>
-                <label for="reg-email">E-Mail:</label>
-                <input type="email" id="reg-email" name="reg-email" required>
-                <label for="reg-password">Şifre:</label>
-                <input type="password" id="reg-password" name="reg-password" required>
-                <label for="address">Adres Bilgileri:</label>
-                <input type="text" id="address" name="address" required>
-                <label for="industry-type">Sanayi Türü:</label>
-                <select id="industry-type" name="industry-type" required>
-                    <option value="">Seçiniz</option>
-                    <!-- Adana OSB Sanayi Türleri buraya eklenecek -->
-                </select>
-                <button type="submit" class="btn">Kayıt Ol</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- İlan Oluştur Modal -->
-    <div id="create-ad-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="close-create-ad-modal">&times;</span>
-            <h2>İlan Oluştur</h2>
-            <form id="create-ad-form">
-                <label for="waste-type">Atık Türü:</label>
-                <select id="waste-type" name="waste-type" required>
-                    <option value="">Seçiniz</option>
-                    <!-- Adana OSB Atık Türleri buraya eklenecek -->
-                </select>
-                <label for="quantity">Miktar:</label>
-                <input type="number" id="quantity" name="quantity" required>
-                <label for="unit">Birim:</label>
-                <select id="unit" name="unit" required>
-                    <option value="kg">kg</option>
-                    <option value="adet">adet</option>
-                    <option value="m³">m³</option>
-                    <!-- Diğer birimler buraya eklenecek -->
-                </select>
-                <label for="photo">Fotoğraf Yükle (Opsiyonel):</label>
-                <input type="file" id="photo" name="photo" accept="image/*">
-                <label for="description">Açıklama:</label>
-                <textarea id="description" name="description" rows="4"></textarea>
-                <button type="submit" class="btn">İlanı Oluştur</button>
-            </form>
         </div>
     </div>
 
