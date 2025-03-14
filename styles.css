@@ -35,7 +35,7 @@ nav ul li {
 }
 
 nav ul li img {
-    width: 25px;  /* İkon boyutunu belirler */
+    width: 125px;  /* İkon boyutunu belirler */
     height: auto; /* Yüksekliği otomatik yapar */
     margin-right: 5px; /* İkon ile metin arasındaki mesafeyi ayarlar */
 }
