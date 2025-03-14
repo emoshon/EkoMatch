@@ -21,25 +21,24 @@ header {
     font-size: 24px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.waste-list, .create-waste, .login-page, .register-page {
     display: flex;
+    flex-direction: column; /* Dikey hizalama için */
+    align-items: center; /* Ortalamak için */
+    justify-content: center; /* Ortalamak için */
+    text-align: center; /* Metni ortalamak için */
 }
 
-nav ul li {
-    margin: 0 15px;
-    display: flex;
-    align-items: center; /* İkonları dikeyde ortalar */
-}
-
-nav ul li img {
-    width: 125px;  /* İkon boyutunu belirler */
+.waste-list img, .create-waste img, .login-page img, .register-page img {
+    width: 150px; /* Resim boyutunu büyütmek için */
     height: auto; /* Yüksekliği otomatik yapar */
-    margin-right: 5px; /* İkon ile metin arasındaki mesafeyi ayarlar */
+    margin-bottom: 10px; /* Resim ile metin arasındaki mesafeyi ayarlar */
 }
 
+.waste-list h2, .create-waste h2, .login-page h2, .register-page h2 {
+    font-size: 24px; /* Başlık boyutunu ayarlamak için */
+    margin: 0; /* Varsayılan marjı kaldırmak için */
+}
 nav ul li a {
     color: #FFFFFF;
     text-decoration: none;
