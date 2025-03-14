@@ -161,7 +161,9 @@ form {
     display: flex;
     flex-direction: column;
 }
-
+img {
+    display: block; /* Görünür yapmak için */
+}
 form label {
     margin-top: 10px;
 }
