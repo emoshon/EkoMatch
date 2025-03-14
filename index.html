@@ -7,185 +7,132 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header>
-    <h1><a href="#" id="home-link">EkoMatch</a></h1>
-</header>
-
-<nav>
-    <a href="#" id="home-link">Ana Sayfa</a>
-    <a href="#" id="waste-list-link">Atık İlanları</a>
-    <a href="#">Hakkımızda</a>
-    <a href="#">İletişim</a>
-    <a href="#" id="profile-link">Profil</a>
-</nav>
-
-<div class="content">
-    <!-- Ana Sayfa İçeriği -->
-    <div class="main-content" id="main-content">
-        <h2>Hoşgeldiniz! Atık ilanlarına göz atabilirsiniz.</h2>
-        <button class="btn" id="create-waste-button">İlan Oluştur</button>
-    </div>
-
-    <!-- Atık İlanları Sayfası (Başlangıçta gizlenmiş) -->
-    <div class="waste-list" id="waste-list">
-        <div class="filter">
-            <button class="btn">İlanları Fiyata Göre Filtrele</button>
-            <button class="btn">İlanları Türlere Göre Filtrele</button>
+    <header>
+        <div class="logo">
+            <h1>EkoMatch</h1>
         </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Ana Sayfa</a></li>
+                <li><a href="#">Atık İlanları</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">İletişim</a></li>
+                <li><a href="#" id="profile-link">Profil</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="container">
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Atık Fotoğrafı">
-                <h3>Firma Adı</h3>
-                <p>Atık Türü: Plastik</p>
-                <p>Fiyat: Ücretsiz</p>
-                <button class="btn">İletişime Geç</button>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Sanayi atıklarını değerlendir, doğayı koru</h2>
+                <button id="create-ad-btn" class="btn">Hemen İlan Oluştur</button>
             </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Atık Fotoğrafı">
-                <h3>Firma Adı 2</h3>
-                <p>Atık Türü: Cam</p>
-                <p>Fiyat: Ücretsiz</p>
-                <button class="btn">İletişime Geç</button>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <img src="images/feature1.svg" alt="Kolay Kullanım">
+                <h3>Kolay Kullanım</h3>
+                <p>Platformumuz kullanıcı dostu arayüzü ile atık ilanlarını kolayca oluşturmanızı sağlar.</p>
             </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Atık Fotoğrafı">
-                <h3>Firma Adı 3</h3>
-                <p>Atık Türü: Metal</p>
-                <p>Fiyat: Ücretsiz</p>
-                <button class="btn">İletişime Geç</button>
+            <div class="feature">
+                <img src="images/feature2.svg" alt="Güvenilir İşlemler">
+                <h3>Güvenilir İşlemler</h3>
+                <p>Tüm işlemleriniz güvenli ve şeffaf bir şekilde gerçekleştirilir.</p>
             </div>
+            <div class="feature">
+                <img src="images/feature3.svg" alt="Çevre Dostu">
+                <h3>Çevre Dostu</h3>
+                <p>Atıklarınızı geri dönüştürerek çevreye katkıda bulunun.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EkoMatch. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <!-- Profil Menüsü -->
+    <div class="profile-menu" id="profile-menu">
+        <ul>
+            <li><a href="#">Favoriler</a></li>
+            <li><a href="#">Kaydedilenler</a></li>
+            <li><a href="#">Çıkış Yap</a></li>
+        </ul>
+    </div>
+
+    <!-- Giriş Yap Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-login-modal">&times;</span>
+            <h2>Giriş Yap</h2>
+            <form id="login-form">
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Şifre:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" class="btn">Giriş Yap</button>
+            </form>
+            <p>Hesabınız yok mu? <a href="#" id="show-register">Kayıt Ol</a></p>
         </div>
     </div>
 
-    <!-- İlan Oluşturma Sayfası (Başlangıçta gizlenmiş) -->
-    <div class="create-waste" id="create-waste-page">
-        <h2>İlan Oluştur</h2>
-        <form id="create-waste-form">
-            <label for="waste-type">Atık Türü:</label>
-            <select id="waste-type" name="waste-type">
-                <option value="plastik">Plastik</option>
-                <option value="cam">Cam</option>
-                <option value="metal">Metal</option>
-            </select><br><br>
-
-            <label for="waste-amount">Miktar:</label>
-            <input type="number" id="waste-amount" name="waste-amount" required><br><br>
-
-            <label for="waste-photo">Fotoğraf (Opsiyonel):</label>
-            <input type="file" id="waste-photo" name="waste-photo"><br><br>
-
-            <label for="waste-description">Açıklama:</label>
-            <textarea id="waste-description" name="waste-description"></textarea><br><br>
-
-            <button type="submit" class="btn">İlanı Oluştur</button>
-        </form>
+    <!-- Kayıt Ol Modal -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-register-modal">&times;</span>
+            <h2>Kayıt Ol</h2>
+            <form id="register-form">
+                <label for="company-name">Firma İsmi:</label>
+                <input type="text" id="company-name" name="company-name" required>
+                <label for="phone">Telefon:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="reg-email">E-Mail:</label>
+                <input type="email" id="reg-email" name="reg-email" required>
+                <label for="reg-password">Şifre:</label>
+                <input type="password" id="reg-password" name="reg-password" required>
+                <label for="address">Adres Bilgileri:</label>
+                <input type="text" id="address" name="address" required>
+                <label for="industry-type">Sanayi Türü:</label>
+                <select id="industry-type" name="industry-type" required>
+                    <option value="">Seçiniz</option>
+                    <!-- Adana OSB Sanayi Türleri buraya eklenecek -->
+                </select>
+                <button type="submit" class="btn">Kayıt Ol</button>
+            </form>
+        </div>
     </div>
 
-    <!-- Giriş/Kayıt Sayfası (Başlangıçta gizlenmiş) -->
-    <div class="login-page" id="login-page">
-        <h2>Giriş Yap veya Kayıt Ol</h2>
-        <form id="login-form">
-            <label for="email">E-Mail:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="password">Şifre:</label>
-            <input type="password" id="password" name="password" required><br><br>
-            <button type="submit" class="btn">Giriş Yap</button>
-        </form>
-        <p>Henüz kaydınız yok mu? <a href="#" id="register-link">Kayıt Ol</a></p>
+    <!-- İlan Oluştur Modal -->
+    <div id="create-ad-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-create-ad-modal">&times;</span>
+            <h2>İlan Oluştur</h2>
+            <form id="create-ad-form">
+                <label for="waste-type">Atık Türü:</label>
+                <select id="waste-type" name="waste-type" required>
+                    <option value="">Seçiniz</option>
+                    <!-- Adana OSB Atık Türleri buraya eklenecek -->
+                </select>
+                <label for="quantity">Miktar:</label>
+                <input type="number" id="quantity" name="quantity" required>
+                <label for="unit">Birim:</label>
+                <select id="unit" name="unit" required>
+                    <option value="kg">kg</option>
+                    <option value="adet">adet</option>
+                    <option value="m³">m³</option>
+                    <!-- Diğer birimler buraya eklenecek -->
+                </select>
+                <label for="photo">Fotoğraf Yükle (Opsiyonel):</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+                <label for="description">Açıklama:</label>
+                <textarea id="description" name="description" rows="4"></textarea>
+                <button type="submit" class="btn">İlanı Oluştur</button>
+            </form>
+        </div>
     </div>
 
-    <!-- Kayıt Sayfası (Başlangıçta gizlenmiş) -->
-    <div class="register-page" id="register-page">
-        <h2>Kayıt Ol</h2>
-        <form id="register-form">
-            <label for="company-name">Firma İsmi:</label>
-            <input type="text" id="company-name" name="company-name" required><br><br>
-            <label for="phone">Telefon:</label>
-            <input type="tel" id="phone" name="phone" required><br><br>
-            <label for="register-email">E-Mail:</label>
-            <input type="email" id="register-email" name="email" required><br><br>
-            <label for="register-password">Şifre:</label>
-            <input type="password" id="register-password" name="password" required><br><br>
-            <label for="address">Adres:</label>
-            <input type="text" id="address" name="address" required><br><br>
-            <label for="industry">Sanayi Türü:</label>
-            <select id="industry" name="industry" required>
-                <option value="kimya">Kimya</option>
-                <option value="metal">Metal</option>
-                <option value="plastik">Plastik</option>
-                <option value="gıda">Gıda</option>
-            </select><br><br>
-            <button type="submit" class="btn">Kayıt Ol</button>
-        </form>
-        <p>Zaten kaydınız var mı? <a href="#" id="login-link">Giriş Yap</a></p>
-    </div>
-</div>
-
-<div class="footer">
-    <p>Sanayi atıklarını değerlendir, doğayı koru</p>
-</div>
-
-<!-- Profil Menüsü -->
-<div class="profile-menu" id="profile-menu">
-    <p>Favoriler</p>
-    <p>Kaydedilenler</p>
-    <p>Çıkış Yap</p>
-</div>
-
-<script>
-    // Profil menüsünü açma
-    document.getElementById("profile-link").addEventListener("click", function() {
-        var profileMenu = document.getElementById("profile-menu");
-        profileMenu.classList.toggle("show");
-    });
-
-    // Profil menüsünden vazgeçip, boş bir yere tıklanınca kapanmasını sağlama
-    window.addEventListener("click", function(event) {
-        if (!event.target.closest("#profile-menu") && !event.target.closest("#profile-link")) {
-            document.getElementById("profile-menu").classList.remove("show");
-        }
-    });
-
-    // Atık ilanları linkine tıklama
-    document.getElementById("waste-list-link").addEventListener("click", function() {
-        document.getElementById("waste-list").style.display = "block";
-        document.getElementById("main-content").style.display = "none";
-        document.getElementById("create-waste-page").style.display = "none";
-        document.getElementById("login-page").style.display = "none";
-        document.getElementById("register-page").style.display = "none";
-    });
-
-    // İlan Oluştur butonuna tıklama
-    document.getElementById("create-waste-button").addEventListener("click", function() {
-        document.getElementById("create-waste-page").style.display = "block";
-        document.getElementById("main-content").style.display = "none";
-        document.getElementById("waste-list").style.display = "none";
-        document.getElementById("login-page").style.display = "none";
-        document.getElementById("register-page").style.display = "none";
-    });
-
-    // Ana Sayfa linkine tıklanması
-    document.getElementById("home-link").addEventListener("click", function() {
-        document.getElementById("main-content").style.display = "block";
-        document.getElementById("waste-list").style.display = "none";
-        document.getElementById("create-waste-page").style.display = "none";
-        document.getElementById("login-page").style.display = "none";
-        document.getElementById("register-page").style.display = "none";
-    });
-
-    // Giriş ve Kayıt Sayfaları
-    document.getElementById("login-link").addEventListener("click", function() {
-        document.getElementById("login-page").style.display = "block";
-        document.getElementById("register-page").style.display = "none";
-    });
-
-    document.getElementById("register-link").addEventListener("click", function() {
-        document.getElementById("register-page").style.display = "block";
-        document.getElementById("login-page").style.display = "none";
-    });
-</script>
-
+    <script src="scripts.js"></script>
 </body>
 </html>
