@@ -9,16 +9,24 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;     /* Tüm öğeleri dikeyde ortalar */
+    align-items: center;  /* Logo ve yazıları dikeyde ortalar */
     padding: 15px 30px;
     background-color: #284427;
-    height: 80px;
+    height: 80px;  /* Header yüksekliği */
 }
 
 .logo h1 {
     color: #FFFFFF;
     margin: 0;
     font-size: 24px;
+    display: flex;
+    align-items: center;  /* Logo metnini dikeyde ortalar */
+}
+
+/* Diğer yazılar (örn: Anasayfa, Hakkımızda) ortalanacak */
+header > div {
+    display: flex;
+    align-items: center;  /* Yazıları dikeyde ortalar */
 }
 
 nav ul {
