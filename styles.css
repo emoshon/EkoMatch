@@ -128,3 +128,5 @@ nav a:hover {
 .main-content {
     display: block;
 }
+/* Mevcut stil kodlarınıza eklemeniz gereken yeni stil kodları */
+.waste-list, .create-waste, .login-page, .register-page {
