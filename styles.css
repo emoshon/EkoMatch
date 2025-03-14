@@ -1,4 +1,3 @@
-
 body {
     background-color: #FFFFFF;
     font-family: Arial, sans-serif;
@@ -92,4 +91,28 @@ nav a:hover {
 
 .btn:hover {
     background-color: #b1d1af;
+}
+
+#profile-link {
+    position: relative;
+}
+
+.profile-menu {
+    background-color: #ffffff;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    border: 1px solid #ddd;
+    width: 150px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.profile-menu p {
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.profile-menu p:hover {
+    background-color: #f4f4f4;
 }
