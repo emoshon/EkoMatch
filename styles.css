@@ -1,25 +1,8 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FFFFFF;
-    color: #101a0f;
-}
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #FFFFFF; color: #101a0f; }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;  /* Menüyü yükseklik olarak ortalar */
-    padding: 15px 30px;
-    background-color: #284427;
-    height: 80px;  /* Header yüksekliği ekledik */
-}
+header { display: flex; justify-content: space-between; align-items: center;  /* Menüyü yükseklik olarak ortalar / padding: 15px 30px; background-color: #284427; height: 80px;  / Header yüksekliği ekledik */ }
 
-.logo h1 {
-    color: #FFFFFF;
-    margin: 0;
-    font-size: 24px;
-}
+.logo h1 { color: #FFFFFF; margin: 0; font-size: 24px; }
 
 nav ul {
     list-style: none;
