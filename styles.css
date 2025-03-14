@@ -26,11 +26,18 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    align-items: center;  /* Menü öğelerinin dikeyde ortalanması sağlanır */
 }
 
 nav ul li {
     margin: 0 15px;
+    display: flex;
+    align-items: center; /* Dikeyde ortalamayı sağlar */
+}
+
+nav ul li img {
+    width: 25px;    /* İkon genişliğini ayarlayın */
+    height: auto;   /* Yüksekliği otomatik ayarla */
+    margin-right: 5px;  /* İkonla metin arasına boşluk ekleyin */
 }
 
 nav ul li a {
