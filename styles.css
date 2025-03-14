@@ -116,3 +116,15 @@ nav a:hover {
 .profile-menu p:hover {
     background-color: #f4f4f4;
 }
+/* Mevcut stil kodlarınıza eklemeniz gereken yeni stil kodları */
+.waste-list {
+    display: none;
+}
+
+.login-page, .register-page {
+    display: none;
+}
+
+.main-content {
+    display: block;
+}
