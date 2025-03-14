@@ -31,13 +31,13 @@ nav ul {
 nav ul li {
     margin: 0 15px;
     display: flex;
-    align-items: center; /* Dikeyde ortalamayı sağlar */
+    align-items: center; /* İkonları dikeyde ortalar */
 }
 
 nav ul li img {
-    width: 25px;    /* İkon genişliğini ayarlayın */
-    height: auto;   /* Yüksekliği otomatik ayarla */
-    margin-right: 5px;  /* İkonla metin arasına boşluk ekleyin */
+    width: 25px;  /* İkon boyutunu belirler */
+    height: auto; /* Yüksekliği otomatik yapar */
+    margin-right: 5px; /* İkon ile metin arasındaki mesafeyi ayarlar */
 }
 
 nav ul li a {
