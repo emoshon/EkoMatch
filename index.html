@@ -3,34 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EkoMatch - Atık Eşleştirme Platformu</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>EkoMatch</title>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #b1d1af;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            color: #101a0f;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        nav a {
+            color: #101a0f;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 20px;
+        }
+        .footer {
+            background-color: #b1d1af;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer p {
+            color: #101a0f;
+            margin: 0;
+        }
+        .profile-menu {
+            display: none;
+        }
+        .profile-menu.show {
+            display: block;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background-color: #f4f4f4;
+            padding: 20px;
+            width: 30%;
+            border: 1px solid #ddd;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .filter {
+            margin: 20px 0;
+        }
+        .btn {
+            background-color: #101a0f;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">EkoMatch</div>
-        <nav>
-            <ul>
-                <li><a href="#">Ana Sayfa</a></li>
-                <li><a href="#">Hakkımızda</a></li>
-                <li><a href="#">İletişim</a></li>
-                <li><a href="#">İlanlar</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <h1>Sanayi Atıklarını Değerlendir, Doğayı Koru</h1>
-        <a href="#" class="button">Hemen İlan Oluştur</a>
-    </section>
-    
+<header>
+    <h1>EkoMatch</h1>
+</header>
 
-    
+<nav>
+    <a href="#">Ana Sayfa</a>
+    <a href="#">Atık İlanları</a>
+    <a href="#">Hakkımızda</a>
+    <a href="#">İletişim</a>
+    <a href="#" id="profile-link">Profil</a>
+</nav>
 
-    <footer>
-        <p>© 2025 EkoMatch | Yeşil Atık Eşleştirme Platformu</p>
-    </footer>
-    
-    <script src="script.js"></script>
+<div class="content">
+    <div class="filter">
+        <button class="btn">İlanları Fiyata Göre Filtrele</button>
+        <button class="btn">İlanları Türlere Göre Filtrele</button>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Atık Fotoğrafı">
+            <h3>Firma Adı</h3>
+            <p>Atık Türü: Plastik</p>
+            <p>Fiyat: Ücretsiz</p>
+            <button class="btn">İletişime Geç</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Atık Fotoğrafı">
+            <h3>Firma Adı 2</h3>
+            <p>Atık Türü: Cam</p>
+            <p>Fiyat: Ücretsiz</p>
+            <button class="btn">İletişime Geç</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Atık Fotoğrafı">
+            <h3>Firma Adı 3</h3>
+            <p>Atık Türü: Metal</p>
+            <p>Fiyat: Ücretsiz</p>
+            <button class="btn">İletişime Geç</button>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>Sanayi atıklarını değerlendir, doğayı koru</p>
+</div>
+
+<!-- Profile Menu (Hidden by default) -->
+<div class="profile-menu" id="profile-menu">
+    <p>Favoriler</p>
+    <p>Kaydedilenler</p>
+    <p>Çıkış Yap</p>
+</div>
+
+<script>
+    document.getElementById("profile-link").addEventListener("click", function() {
+        var profileMenu = document.getElementById("profile-menu");
+        profileMenu.classList.toggle("show");
+    });
+</script>
+
 </body>
 </html>
