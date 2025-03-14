@@ -1,60 +1,95 @@
+
 body {
+    background-color: #FFFFFF;
     font-family: Arial, sans-serif;
-    background-color: #ffffff; /* Arka plan beyaz */
-    color: #101a0f;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #b1d1af; /* Header rengi */
-    color: #101a0f; /* Yazı rengi */
+    background-color: #b1d1af;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: #101a0f;
+    margin: 0;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
-    align-items: center;
+    background-color: #f4f4f4;
+    padding: 10px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
+nav a {
+    color: #101a0f;
+    text-decoration: none;
     margin: 0 15px;
 }
 
-nav ul li a {
-    color: #101a0f; /* Menü yazı rengi */
-    text-decoration: none;
+nav a:hover {
+    text-decoration: underline;
 }
 
-.hero {
-    text-align: center;
-    padding: 50px;
-}
-
-.button {
-    background-color: #101a0f;
-    color: #f2f8f2;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-.button {
-    font-size: 20px; 
-    padding: 15px 25px; 
-    font-weight: bold;
-}
-.listings {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.listing {
-    background: white;
+.content {
     padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
+}
+
+.footer {
+    background-color: #b1d1af;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    color: #101a0f;
+    margin: 0;
+}
+
+.profile-menu {
+    display: none;
+}
+
+.profile-menu.show {
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 30%;
+    border: 1px solid #ddd;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.filter {
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: #101a0f;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #b1d1af;
 }
